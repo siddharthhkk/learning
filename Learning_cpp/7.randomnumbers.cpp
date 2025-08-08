@@ -1,3 +1,4 @@
+//Learing how to create random numbers and about functions.
 #include <iostream>
 #include <ctime>
 
