@@ -39,4 +39,4 @@ Lately, I’ve been spending my energy on:
 
 If you want to poke around:
 ```bash
-git clone https://github.com/siddharthhkk/vscode.git
+git clone https://github.com/siddharthhkk/VS-Code
