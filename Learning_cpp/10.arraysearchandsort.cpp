@@ -28,6 +28,12 @@ int main() {
     for (int i = 0; i < size1; i++)
         cout << array[i] << ", ";
     cout << "}\n";
+
+    //fill() - fill func is used to fill an array with a specific value.   fill(start, end, value);
+    int arr[10];
+    fill(arr, arr + 10, 5);    // this will fill the entire array from 0 to 10th element with 5.
+    fill(arr + 2, arr + 5, 10); // this will fill the array from 2nd to 5th element with 10.
+    fill(arr + 6, arr + 8, 15); // this will fill the array from 6th to 8th element with 15.
 }
 
 int search(int age[], int size, int myage1) {
