@@ -13,7 +13,7 @@ int main(){
     // if you have two conditions like x >= 18 and x >= 100 then the statement which was written first will be considered.
     
     // Switch = alternative of using many else if  statements.
-    int month
+    int month;
     std::cout << "Enter a month: \n";
     std::cin >> month;
     switch (month){
@@ -49,5 +49,6 @@ int main(){
     }
     //this could be also written as
     condition ? true statement : false statement.
-    grade >= 60 ? std::cout << "Pass\n"; std::cout << "Fail\n";
+    int grade = 75;
+    grade >= 60 ? std::cout << "Pass\n" : std::cout << "Fail\n";
 }

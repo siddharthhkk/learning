@@ -18,6 +18,7 @@ int main(){
     // this will automatically take the variable from first and use it here.
     // just like this using namespace std; is used in global to have ease of not typing std:: again and again because std namespace is a part of iostream.
     // using std::cout; and using std::string will be a good practice because we only using func we need not all.
-    std::cout << x << '\n';
+    std::cout << x<< '\n';
+    std::cout << second::x << '\n';
     return 0;
 }
