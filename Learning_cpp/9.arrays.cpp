@@ -27,6 +27,8 @@ int main() {
 
     char name[5];  //when initializing a array it allocates the memory as per the given data type.
     std::cout << "Size of char array is: " << sizeof(name) << " bytes" << std::endl;
+    // you can use cars.size() ifthe array is initialzed by a vector or array class 
+    // array<int,5> cars = {1,2,3,4,5}; requires #include <array>
 
     // when trying to find the size of an array, it gives the size in bytes of the array, not the number of elements in the array.
     // to find the number of elements in the array, you can divide the total size of the array by the size of data type of the elements.

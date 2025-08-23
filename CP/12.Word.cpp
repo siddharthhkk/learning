@@ -22,3 +22,23 @@ int main() {
         cout << s << endl;
     }
 }
+// or 
+/*#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+
+    int isu = count_if(s.begin(), s.end(), ::isupper);
+    int isl = s.size() - isu; // rest are lowercase since only letters
+
+    if (isu > isl) {
+        transform(s.begin(), s.end(), s.begin(), ::toupper);
+    } else {
+        transform(s.begin(), s.end(), s.begin(), ::tolower);
+    }
+
+    cout << s << '\n';
+    return 0;
+}*/
