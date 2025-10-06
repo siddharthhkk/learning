@@ -142,5 +142,44 @@ int main() {
     pqmin.push(20); //{10, 20}
     pqmin.push(5); //{5, 20, 10}
     std::cout << pqmin.top() << std::endl; // prints the top element of the min heap priority queue (5)
-    pqmin.pop(); // removes the top element of the min heap priority queue (5)
+    pqmin.pop(); so what // removes the top element of the min heap priority queue (5)
+
+    //set - seventh container which is a collection of unique elements stored in sorted order.  
+    std::set<int> s;
+    s.insert(10); //{10}
+    s.insert(20); //{10, 20}
+    s.insert(5); //{5, 10, 20}
+    s.insert(10); //{5, 10, 20} (10 is already present, so it won't be added again)
+    s.erase(5); //{10, 20} (removes 5 from the set)
+    int cnt = s.count(10); // cnt = 1 (10 is present in the set)
+
+    //multiset - eighth container which is similar to set but allows duplicate elements.
+    std::multiset<int> ms;
+    ms.insert(10); //{10}
+    ms.insert(20); //{10, 20}
+    ms.insert(5); //{5, 10, 20}
+    ms.insert(10); //{5, 10, 10, 20}
+    ms.erase(10); //{5, 20} (removes all occurrences of 10 from the multiset)
+    ms.insert(10); //{5, 10, 20}
+    ms.insert(10); //{5, 10, 10, 20}
+    int cnt2 = ms.count(10); // cnt2 = 2 (10 is present twice in the multiset)
+
+    //map - ninth container which is a collection of key-value pairs, where each key is unique and maps to a specific value.
+    std::map<int, int> m;
+    m[1] = 100; //{1: 100}
+    m[2] = 200; //{1: 100, 2: 200a}
+    m[3] = 300; //{1: 100, 2: 200, 3: 300}
+    m[1] = 400; //{1: 400, 2: 200, 3: 300}  (1 is already present, so its value is updated to 400)
+    m.insert({4, 500}); //{1: 400, 2: 200, 3: 300, 4: 500}
+    m.erase(2); //{1: 400, 3: 300, 4: 500}
+    for (auto sexy : m) {               
+        std::cout << sexy.first << " " << sexy.second << std::endl; // prints all key-value pairs in the map
+    }
+    std::cout << m[3] << std::endl; // prints the value associated with key 3 (300)
+    std::cout << m.size() << std::endl; // prints the size of the map (3)
+    std::cout << m.count(1) << std::endl; // checks if key 1 is present in the map (1 if present, 0 if not) 
+
+    //unordered_map - tenth container which is similar to map but does not store elements in sorted order and allows for faster access using hashing.
+    std::unordered_map<int, int> um;
+    um[1] = 100; //{1: 100}     
 }
