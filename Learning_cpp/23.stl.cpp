@@ -167,10 +167,10 @@ int main() {
     //map - ninth container which is a collection of key-value pairs, where each key is unique and maps to a specific value.
     std::map<int, int> m;
     m[1] = 100; //{1: 100}
-    m[2] = 200; //{1: 100, 2: 200a}
+    m[2] = 200; //{1: 100, 2: 200}
     m[3] = 300; //{1: 100, 2: 200, 3: 300}
     m[1] = 400; //{1: 400, 2: 200, 3: 300}  (1 is already present, so its value is updated to 400)
-    m.insert({4, 500}); //{1: 400, 2: 200, 3: 300, 4: 500}
+    m.insert({4, 500}); //{1: 400, 2: 200, 3: 300, 4: 500}  or m.emplace({4,500});
     m.erase(2); //{1: 400, 3: 300, 4: 500}
     for (auto sexy : m) {               
         std::cout << sexy.first << " " << sexy.second << std::endl; // prints all key-value pairs in the map
@@ -182,4 +182,22 @@ int main() {
     //unordered_map - tenth container which is similar to map but does not store elements in sorted order and allows for faster access using hashing.
     std::unordered_map<int, int> um;
     um[1] = 100; //{1: 100}     
+    um[2] = 200; //{1: 100, 2: 200}
+    um[3] = 300; //{1: 100, 2: 200, 3: 300}
+    um[1] = 400; //{    1: 400, 2: 200, 3: 300}  (1 is already present, so its value is updated to 400)
+    um.insert({4, 500}); //{1: 400, 2: 200, 3: 300, 4: 500}  or um.emplace({4,500});
+    um.erase(2); //{1: 400, 3: 300, 4: 500}
+
+    //multimap - eleventh container which is similar to map but allows multiple values for the same key.
+
+    // now for algorithms
+    int a[] = {4, 3, 2, 1};
+    std::sort(a, a+4); // sorts an array of size 4      sort(a.begin(), a.end()); for vector
+    for (int i = 0; i < 4; i++) {
+        std::cout << a[i] << " "; // prints the sorted array
+    }
+    std::sort(a+2, a+4); // sorts the array from index 2 to 3
+    std::sort(a, a+4, std::greater<int>()); // sorts the array in descending order
+    std::reverse(a, a+4); // reverses the array
+    //end
 }
