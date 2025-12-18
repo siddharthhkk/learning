@@ -22,23 +22,25 @@ int main() {
         cout << s << endl;
     }
 }
-// or 
 /*#include <bits/stdc++.h>
 using namespace std;
-
-int main() {
+int main(){
     string s;
     cin >> s;
-
-    int isu = count_if(s.begin(), s.end(), ::isupper);
-    int isl = s.size() - isu; // rest are lowercase since only letters
-
-    if (isu > isl) {
-        transform(s.begin(), s.end(), s.begin(), ::toupper);
-    } else {
-        transform(s.begin(), s.end(), s.begin(), ::tolower);
+    int n = s.size();
+    int upper_count = 0;
+    int lower_count = 0;
+    for(int i = 0; i < n; i++){
+        if(isupper(s[i])) upper_count++;
+        else lower_count++;
     }
-
-    cout << s << '\n';
-    return 0;
-}*/
+    if(upper_count > lower_count){
+        for(int i = 0; i < n; i++) {s[i] = toupper(s[i]);}
+    }
+    else {
+        for(int i =0; i < n; i++){
+            s[i] = tolower(s[i]);
+        }
+    }
+    cout << s << endl;
+}
