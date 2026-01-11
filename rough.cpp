@@ -1,18 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int t;
-    cin >> t;
-    while(t--){
-        int n;
-        string s;
-        cin >> n >> s;
-        int x = 0;
-        for(int i = 0; i < n; i++){
-            if(s[i] == '1') x++;
-            else if (s[i] == '0') x--;
+void selection_sort(int a[], int n){
+    for(int i = 0; i < n; i++){
+        int min = i;
+        for(int j = min; j < n; j++){
+            if(a[j] < a[min]){
+                min = j;
+            }
         }
-        cout << x << endl;
+        swap(a[i], a[min]);
     }
+}
+int main(){
+    int n = 5;
+    int arr[] = {2, 6, 11, 8, 4};
+    for(int i = 0; i < n; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    selection_sort(arr, n);
+    for(int i = 0; i < n; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 }
