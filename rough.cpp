@@ -32,7 +32,6 @@ int main() {
     string s = "ab";
     string op = "pkk";
     string op2 = s + op[0];
-    s = s - 
     cout << op2 << endl;
     cout << s << endl;
 }
