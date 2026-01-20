@@ -8,4 +8,4 @@ int main(){
             cout << i << endl;
         }
     }
-}
+}// O(min(n1, n2))

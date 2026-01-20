@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void selection_sort(int a[], int n){
+/*void selection_sort(int a[], int n){
     for(int i = 0; i < n; i++){
         int min = i;
         for(int j = min; j < n; j++){
@@ -24,4 +24,16 @@ int main(){
         cout << arr[i] << " ";
     }
     cout << endl;
+}*/
+void subsets(string s, string op){
+    return;
 }
+int main() {
+    string s = "ab";
+    string op = "pkk";
+    string op2 = s + op[0];
+    s = s - 
+    cout << op2 << endl;
+    cout << s << endl;
+}
+

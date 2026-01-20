@@ -82,7 +82,7 @@ int main() {
         std::cout << sexy << " ";
     }
     std::cout << std::endl;
-
+ 
     // deque - third container which is a double-ended queue. means you can add or remove elements from both ends.  
     // std::deque (double-ended queue) is a sequence container that allows fast insertion and deletion of elements at both its beginning and end.
     std::deque<int> d;
@@ -142,7 +142,7 @@ int main() {
     pqmin.push(20); //{10, 20}
     pqmin.push(5); //{5, 20, 10}
     std::cout << pqmin.top() << std::endl; // prints the top element of the min heap priority queue (5)
-    pqmin.pop(); so what // removes the top element of the min heap priority queue (5)
+    pqmin.pop();     // removes the top element of the min heap priority queue (5)
 
     //set - seventh container which is a collection of unique elements stored in sorted order.  
     std::set<int> s;
