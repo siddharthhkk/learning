@@ -24,15 +24,36 @@ int main(){
         cout << arr[i] << " ";
     }
     cout << endl;
-}*/
-void subsets(string s, string op){
-    return;
 }
-int main() {
-    string s = "ab";
-    string op = "pkk";
-    string op2 = s + op[0];
-    cout << op2 << endl;
-    cout << s << endl;
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        int n, h, l;
+        cin >> n >> h >> l;
+        int row = 0, col = 0;
+        for(int i = 0; i < n; i++){
+            int x;
+            cin >> x;
+            if(x <= h) row++;
+            if(x <= l) col++;
+        }
+
+        cout << min({row, col, n / 2}) << "\n";
+    }
+}  
+*/
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        int n, q, l, r;
+        cin >> n >> q;
+        int a[n], b[n];
+        for(int i = 0; i < n; i++) cin >> a[i];
+        for(int i = 0; i < n; i++) cin >> b[i];
+        
+    }
 }
+
 
