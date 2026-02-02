@@ -101,39 +101,8 @@ int main(){
 using namespace std;
 
 int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        int n;
-        string s;
-        cin >> n >> s;
-
-        int total = 0;
-        int lastOccupied = -1; // position of last '1'
-
-        for (int i = 0; i < n; i++) {
-            if (s[i] == '1') {
-                if (lastOccupied == -1) {
-                    // zeros at the start
-                    int len = i;
-                    total += (len + 1) / 2;
-                } else {
-                    // zeros between lastOccupied and current '1'
-                    int len = i - lastOccupied - 1;
-                    total += (len - 1) / 2;
-                }
-                total++; // count this '1'
-                lastOccupied = i;
-            }
-        }
-
-        // zeros after last '1'
-        if (lastOccupied != n - 1) {
-            int len = n - lastOccupied - 1;
-            total += (len + 1) / 2; // edge segment
-        }
-
-        cout << total << "\n";
-    }
+    long long a, b;
+    cin >> a >> b;
+    cout << __gcd(a, b) << endl;
 }
 
