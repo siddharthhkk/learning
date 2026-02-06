@@ -101,8 +101,20 @@ int main(){
 using namespace std;
 
 int main() {
-    long long a, b;
-    cin >> a >> b;
-    cout << __gcd(a, b) << endl;
+    
+        int n, x;
+        cin >> n >> x;
+        vector<int> a(n);
+        for(int i = 0; i < n; i++) {cin >> a[i];}
+        int count = 0;
+        for(int i = 0; i < n; i++){
+            for(int j = i+1; j < n; j++){
+                for(int k = j+1; k < n; k++){
+                    for(int l = k+1; l < n; l++){
+                        if(a[i] - (2*a[j]) + (3*a[k]) - (4*a[l]) == x) count ++;
+                    }
+                }
+            }
+        }
+        cout << count << endl;
 }
-
