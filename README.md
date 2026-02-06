@@ -1,4 +1,4 @@
-# vscode 🧪🧠
+# All Learnings 🧪🧠
 
 Hey there! 👋  
 Welcome to my **VS Code lab**, where all my side quests, experiments, and coding chaos live.
@@ -14,29 +14,18 @@ This repo is my personal stash of:
 All neatly packed into folders — one idea at a time.
 
 ---
-
-## 🗂 What's Inside?
-
-Here’s a peek at how things are organized:
-
-Each folder is its own little world. Some are complete, some are messy — all part of the fun!
-
----
+## All The things going on this Repo
+1. C++ Learning Files
+2. Competitive Programming - Contest Questions
+3. Competitive Programming - 800 Rated
+4. Competitive Programming - 900 Rated
+5. Striver A2z Sheet
 
 ## 🎯 Current Focus
-
-Lately, I’ve been spending my energy on:
-
-- 🌐 Brushing up on **web development basics** (HTML, CSS, JS)
-- 🤖 Diving into **Machine Learning**
-- ⚙️ Building small **functional tools and utilities**
-- 📚 Organizing my code and notes in a cleaner way
-- 🧠 Learning by doing — and breaking things
-
+Trying to Get my logic right on Competitive Programming.
+Learn Math For ML
+Learn Little bit of Web Dev just see how things go on there
+then move to python and Django.
 ---
 
-## 🚀 Getting Started
 
-If you want to poke around:
-```bash
-git clone https://github.com/siddharthhkk/VS-Code
