@@ -1,5 +1,3 @@
-
-
 /*void selection_sort(int a[], int n){
     for(int i = 0; i < n; i++){
         int min = i;
@@ -96,25 +94,111 @@ int main(){
         std::cout << std::endl;
     }
         
-}*/
+}
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    
-        int n, x;
-        cin >> n >> x;
-        vector<int> a(n);
-        for(int i = 0; i < n; i++) {cin >> a[i];}
-        int count = 0;
-        for(int i = 0; i < n; i++){
-            for(int j = i+1; j < n; j++){
-                for(int k = j+1; k < n; k++){
-                    for(int l = k+1; l < n; l++){
-                        if(a[i] - (2*a[j]) + (3*a[k]) - (4*a[l]) == x) count ++;
-                    }
-                }
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        vector<long long> a(n);
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+        }
+        
+        // Check if already all equal
+        bool all_equal = true;
+        long long target = a[0];
+        for (int i = 1; i < n; i++) {
+            if (a[i] != target) {
+                all_equal = false;
+                break;
             }
         }
-        cout << count << endl;
+        if (all_equal) {
+            cout << "YES\n";
+            continue;
+        }
+        
+        // Try one operation on each i (0-based)
+        bool possible = false;
+        for (int i = 0; i < n; i++) {
+            vector<long long> b = a;  // copy
+            long long ai = b[i];
+            // Apply op: add ai to 0..i-1, sub ai from i..n-1
+            for (int j = 0; j < n; j++) {
+                if (j < i) {
+                    b[j] += ai;
+                } else {
+                    b[j] -= ai;
+                }
+            }
+            // Check if all equal
+            bool eq = true;
+            long long new_t = b[0];
+            for (int k = 1; k < n; k++) {
+                if (b[k] != new_t) {
+                    eq = false;
+                    break;
+                }
+            }
+            if (eq) {
+                possible = true;
+                break;
+            }
+        }
+        
+        if (possible) {
+            cout << "YES\n";
+        } else {
+            cout << "NO\n";
+        }
+    }
+    return 0;
+}
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+    int n, m;
+    cin >> n >> m;
+    vector<vector<int>> vec(n, vector<int>(m));
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++) cin >> vec[i][j];
+    }
+    for(int j = 0; j < m; j++){
+        cout << vec[0][j] << " ";
+    }
+    for(int i = 1; i < n; i++){
+        cout << vec[i][m-1] << " ";
+    }
+    if(n > 1){
+        for(int j = m-2; j >= 0; j--){
+            cout << vec[n-1][j] << " ";
+        }
+    }
+    if(m > 1){
+        for(int i = n-2; i >= 1; i--){
+            cout << vec[i][0] << " ";
+        }
+    }
+    cout << endl;
+}*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin, s);
+    int space = 1;
+    for(int i = 0; i < s.size(); i++){
+        if(s[i] == ' ') space++;
+    }
+    cout << space << endl;
 }
